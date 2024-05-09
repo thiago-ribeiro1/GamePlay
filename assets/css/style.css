@@ -1,0 +1,615 @@
+/* Importação de fontes do Google Fonts */
+
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato"; 
+  font-size: 15px; /* Tamanho padrão da fonte no body */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove a borda ao focar em um elemento */
+:focus {
+  outline: 0 !important;
+}
+
+a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #000000; /* Cor padrão do texto dos links */
+  text-decoration: none; /* Remove a sublinhado padrão dos links */
+}
+
+a:hover {
+  color: #002cbb; /* Cor do texto do link quando mouse :hover */
+  text-decoration: none; 
+}
+
+h1, h2, h3, h6 {
+  color: #000000; /* Define a cor padrão do texto dos títulos h1, h2, h3, h6 */
+  font-family: "Cabin", 'Times New Roman', Times, serif; /* Fonte padrão dos títulos para Cabin */
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+/* Títulos PlayStation 5, PLayStation 4 e PC */
+.section-title { 
+  text-align: center; /* Centraliza o texto */
+  max-width: 720px; /* Define a largura máxima como 720px */
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-bottom: 50px; /* Margem inferior */
+}
+
+/* Estilizar o texto h2 dentro da seção */
+.section-title h2 {
+  margin-bottom: 0; /* Remover a margem inferior */
+  font-size: 35px; /* Define o tamanho da fonte */
+  font-weight: 700; /* Define o peso da fonte */
+}
+ 
+/*================================================
+Navbar CSS
+=================================================*/
+
+/* Esconde a marca da navbar */
+.navbar-area .navbar-brand .white-logo {
+  display: none;
+  position: fixed !important;
+}
+
+/* Define estilos para a navbar quando estiver fixa no topo da página */
+.navbar-area.header-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+  background: #ffffff !important;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* Define estilos para a navbar quando estiver fixa e visível */
+.navbar-area.header-sticky.is-sticky {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Define estilos para a navbar quando rolar a página para cima */
+.navbar-area.header-sticky.scrollUp {
+  -webkit-transform: translateY(-85px);
+          transform: translateY(-85px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Margens para os itens da navbar */
+.navbar-area.navbar-style-two .xton-nav .navbar .navbar-nav {
+  margin-left: 50px;
+  margin-right: auto;
+}
+
+/* Esconde o menu responsivo */
+.xton-responsive-nav {
+  display: none;
+}
+
+.xton-responsive-nav .logo .white-logo {
+  display: none;
+}
+
+/* Define a cor de fundo da navbar */
+.xton-nav {
+  background-color: #ffffff;
+}
+
+/* Define o espaçamento interno da navbar */
+.xton-nav .container-fluid {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Define o espaçamento interno e remove a posição absoluta da navbar */
+.xton-nav .navbar {
+  position: inherit;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Define estilos para a marca da navbar */
+.xton-nav .navbar .navbar-brand {
+  font-size: inherit;
+  line-height: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Remove o estilo padrão da lista de itens da navbar */
+.xton-nav .navbar ul {
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.xton-nav .navbar .navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.xton-nav .navbar .navbar-nav .nav-item {
+  position: relative;
+}
+
+/* Define estilos para os links dos itens da navbar */
+.xton-nav .navbar .navbar-nav .nav-item a {
+  color: #000000;
+  font-size: 16.5px;
+  font-weight: 600;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+
+.xton-nav .navbar .navbar-nav .nav-item a i {
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin-left: -3px;
+  margin-right: -3px;
+}
+
+/* Quando o link na barra de navegação é passado com o mouse, a cor do texto é alterada para azul */
+.xton-nav .navbar .navbar-nav .nav-item a:hover,
+.xton-nav .navbar .navbar-nav .nav-item a:focus,
+.xton-nav .navbar .navbar-nav .nav-item a.active {
+  color: #001aae;
+}
+
+/* O último item da barra de navegação não terá margem à direita. */
+.xton-nav .navbar .navbar-nav .nav-item:last-child a {
+  margin-right: 0;
+}
+
+/* O primeiro item da barra de navegação não terá margem à esquerda. */
+.xton-nav .navbar .navbar-nav .nav-item:first-child a {
+  margin-left: 0;
+}
+
+/* Quando o mouse passa sobre um item na barra de navegação, a cor do texto é alterada para azul */
+.xton-nav .navbar .navbar-nav .nav-item:hover a {
+  color: #001aae;
+}
+
+/* Estilos para o menu suspenso que aparece ao passar o mouse sobre um item na barra de navegação. */
+.xton-nav .navbar .navbar-nav .nav-item .dropdown-menu {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  position: absolute;
+  border: none;
+  top: 70px;
+  left: 0;
+  width: 250px;
+  z-index: 99;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+/* Estilos para os links dentro do menu suspenso. */
+.xton-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
+  padding: 13px 20px 11px;
+  margin: 0;
+  position: relative;
+  display: block;
+  color: #666666;
+  border-bottom: 1px dashed #e5e5e5;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Cabin";
+}
+
+/* Quando um link dentro do menu suspenso é passado com o mouse ou focado, a cor do texto é alterada para azul */
+.xton-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover,
+.xton-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus {
+  color: #001aae;
+}
+
+.xton-nav .navbar .navbar-nav .nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* Estilos mobile em telas menores até 991px */
+@media only screen and (max-width: 991px) {
+  .xton-responsive-nav {
+    display: block;
+  }
+  .xton-responsive-nav .xton-responsive-menu {
+    position: relative;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .mean-nav {
+    margin-top: 45px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .mean-nav ul {
+    font-size: 15px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .mean-nav ul li a.active {
+    color: #001aae;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .mean-nav ul li li a {
+    font-size: 15px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav {
+    overflow-y: scroll;
+    height: 306px;
+    -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .nav-item {
+    overflow: hidden;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .nav-item .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .nav-item .row {
+    display: block;
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -20px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .nav-item .row .col {
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .nav-item .row .col:last-child {
+    margin-bottom: 15px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .nav-item a {
+    width: 100%;
+    float: unset;
+    display: block;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .submenu-title {
+    color: #000000;
+    position: relative;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 13.5px;
+    font-weight: 600;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .submenu-title::before {
+    width: 30px;
+    height: 1px;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: #001aae;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .submenu-title:first-child {
+    margin-top: 5px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu a {
+    border-bottom: none !important;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .mean-expand {
+    display: none !important;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu {
+    width: auto;
+    overflow: hidden;
+    display: block !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu li a {
+    border: none;
+    margin-top: 15px;
+    color: #666666;
+    padding: 0;
+    font-weight: 400;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu li a:hover, .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu li a.active {
+    color: #001aae;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu .aside-trending-products {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu .aside-trending-products img {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu .aside-trending-products .category {
+    position: absolute;
+    left: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu .aside-trending-products .category h4 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu .aside-trending-products .link-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu .aside-trending-products:not(:first-child) {
+    margin-top: 15px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu .aside-trending-products:hover img {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .megamenu-submenu .aside-trending-products:hover .category {
+    bottom: 10px;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .brand-slides {
+    margin-top: 0;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .navbar-nav .nav-item.megamenu .dropdown-menu .brand-slides .brand-item a {
+    display: block !important;
+    padding: 20px !important;
+    width: auto !important;
+  }
+  .xton-responsive-nav .xton-responsive-menu.mean-container .others-option {
+    display: none;
+  }
+  .xton-responsive-nav .mean-container a.meanmenu-reveal {
+    color: #000000;
+  }
+  .xton-responsive-nav .mean-container a.meanmenu-reveal span {
+    background: #000000;
+    position: relative;
+    top: 8px;
+    margin-top: -10px;
+  }
+  .xton-responsive-nav .logo {
+    position: relative;
+    width: 50%;
+    z-index: 999;
+  }
+  .xton-nav {
+    display: none;
+  }
+  .navbar-area {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .navbar-area.header-sticky {
+    display: none;
+  }
+}
+
+/*================================================
+Imagem e texto Tela Inicial
+=================================================*/
+
+.banner-bg {
+  background-image: url('../../assets/img/banner1.jpg'); /* Imagem Tela Inicial  */
+  background-size: cover;
+  background-position: center;
+  height: 70vh; /* altura da imagem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-inicio {
+  color: white; /* Cor do texto */
+  font-size: 3rem; /* Tamanho do texto */
+  text-align: center; /* Alinhamento do texto */
+  margin-bottom: 350px; /* Subir mais o texto */
+  font-family: "boxicons" !important;
+  font-weight: bold;
+  font-style: normal;
+  
+}
+
+/*================================================
+Categorias Banner CSS
+=================================================*/
+
+.categorias-box {
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.categorias-box img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.categorias-box .content {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #ffffff;
+  -webkit-box-shadow: 1px 1px 3px rgba(136, 136, 136, 0.19);
+          box-shadow: 1px 1px 3px rgba(136, 136, 136, 0.19);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.categorias-box .content h3 {
+  margin-bottom: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.categorias-box:hover img { /* box:hover mexer na imagem ao passar mouse por cima */
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.categorias-box:hover .content {
+  background-color: #001aae;
+}
+
+.categorias-box:hover .content h3 {
+  color: #ffffff;
+}
+
+/*================================================
+Produtos CSS
+=================================================*/
+
+.jogos-box {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.jogos-box .img-jogos {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.jogos-box .img-jogos a {
+  position: relative;
+  display: block;
+}
+
+.jogos-box .img-jogos a img {
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.jogos-box .img-jogos a .hover-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.jogos-box .jogos {
+  margin-top: 20px;
+  position: relative;
+}
+
+.jogos-box .jogos .category {
+  display: block;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  color: #001aae;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.jogos-box .jogos h3 {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.jogos-box .jogos h3 a {
+  display: inline-block;
+  color: #000000;
+}
+
+.jogos-box .jogos h3 a:hover {
+  color: #001aae;
+}
+
+.jogos-box .jogos .preco {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Quando o mouse passa sobre a caixa de produtos, a imagem principal dos produtos fica invisível e é ampliada em 7%  */
+.jogos-box:hover .img-jogos a .main-image {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.07);
+  transform: scale(1.07);
+}
+
+/* Quando o mouse passa sobre a caixa de produtos, a imagem de sobreposição dos produtos fica visível e volta ao tamanho original. */
+.jogos-box:hover .img-jogos a .hover-image {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
