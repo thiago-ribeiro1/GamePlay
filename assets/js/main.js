@@ -34,17 +34,27 @@
     });
 
     // Voltar ao início
-    $(function(){
-        // Scroll 
+    $(function(){ 
         $(window).on('scroll', function(){
-            var scrolled = $(window).scrollTop();
-            if (scrolled > 300) $('.go-top').addClass('active');
-            if (scrolled < 300) $('.go-top').removeClass('active');
+            // Obtém a posição atual do scroll da janela
+            var scrolled = $(window).scrollTop(); // salva a posição atual do scroll em uma variável
+            
+            // Se o scroll estiver maior que 300 pixels
+            if (scrolled > 300)
+                // Adiciona a classe 'active' ao elemento com a classe '.go-top'
+                $('.go-top').addClass('active');
+            // Se o scroll estiver menor que 300 pixels
+            if (scrolled < 300)
+                // Remove a classe 'active' do elemento com a classe '.go-top'
+                $('.go-top').removeClass('active');
         });  
+    
         // Click 
         $('.go-top').on('click', function() {
-            $("html, body").animate({ scrollTop: "0" },  500);
+            // Quando o elemento com a classe '.go-top' é clicado,
+            // anima o scroll da página para o topo (scroll 0 da página) em 100 milissegundos
+            $("html, body").animate({ scrollTop: "0" },  100);
         });
     });
-
+ 
 }(jQuery));
