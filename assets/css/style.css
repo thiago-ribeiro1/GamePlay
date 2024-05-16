@@ -676,7 +676,7 @@ Go Top CSS
           transform: translateY(-55%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
+} 
 
 .go-top.active {
   bottom: 0;
@@ -686,4 +686,9 @@ Go Top CSS
 
 .go-top:hover i {
   margin-top: -3px;
+}
+
+.btn .btn-primary { /* botão venda / adicionar estoque */
+  border: none;
+  margin-bottom: 20px;
 }
