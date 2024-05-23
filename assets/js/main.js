@@ -8,7 +8,7 @@
         meanScreenWidth: "991"
     });
 
-    // Header Sticky 
+    // Header Sticky  
     // Torna a barra de navegação fixa
     // Quando a posição de rolagem da janela ultrapassa 130 pixels a partir do topo, a classe "is-sticky" é adicionada à barra de navegação
     $(window).on('scroll',function() {
