@@ -58,3 +58,104 @@
     });
  
 }(jQuery));
+
+    // Lista de jogos com seus respectivos IDs de seção
+    const jogos = [
+        { nome: "EA FC 24", id: "playstation5" }, // nome do jogo e id da seção onde tá localizado no html
+        { nome: "Need For Speed Unbound", id: "playstation5" },
+        { nome: "Hogwarts Legacy", id: "playstation5" },
+        { nome: "Call of Duty: Modern Warfare III", id: "playstation5" },
+        { nome: "Assassin's Creed Mirage", id: "playstation5" },
+        { nome: "Spider Man 2", id: "playstation5" },
+        { nome: "Red Dead Redemption 2", id: "playstation4" },
+        { nome: "Fallout", id: "playstation4" },
+        { nome: "Dishonored 2", id: "playstation4" },
+        { nome: "Bloodborne", id: "playstation4" },
+        { nome: "Shadow of the Colossus", id: "playstation4" },
+        { nome: "Detroit: Become Human", id: "playstation4" },
+        { nome: "League of Legends", id: "pc" },
+        { nome: "Call of Duty: Warzone 2", id: "pc" },
+        { nome: "Valorant", id: "pc" },
+        { nome: "Red Dead Redemption 2", id: "pc" },
+        { nome: "Minecraft", id: "pc" },
+        { nome: "Among Us", id: "pc" }
+    ]; 
+
+    // Função para mostrar resultados da pesquisa
+    function mostrarResultados() {
+        
+        const input = document.getElementById('search-input'); // Captura o valor digitado no campo de busca
+        const filter = input.value.toLowerCase(); // Transforma o texto de busca em letras minúsculas
+        const results = document.getElementById('search-results'); // Captura o elemento que exibirá os resultados da busca
+        results.innerHTML = ''; // Limpa os resultados anteriores
+ 
+        // Se houver texto na busca
+        if (filter) {
+            // Filtra os jogos que correspondem ao texto da busca
+            const filteredGames = jogos.filter(game => game.nome.toLowerCase().includes(filter));
+            
+            // Se houver jogos correspondentes
+            if (filteredGames.length) {
+                // Cria um item de lista para cada jogo correspondente
+                filteredGames.forEach(game => {
+                    const item = document.createElement('a');
+                    item.classList.add('list-group-item');
+                    item.textContent = game.nome;
+                    item.href = `#${game.id}`;
+
+                    // Adiciona um evento de clique para redirecionar até a seção do jogo pesquisado
+                    item.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        document.getElementById(game.id).scrollIntoView({ behavior: 'smooth' });
+                    });
+                    // Adiciona o item de lista ao container de resultados
+                    results.appendChild(item);
+                });
+                // Exibe os resultados
+                results.style.display = 'block';
+            } else {
+                // Esconde os resultados se nenhum jogo corresponder
+                results.style.display = 'none';
+            }
+        } else {
+            // Esconde os resultados se a busca estiver vazia
+            results.style.display = 'none';
+        }
+    }
+
+    
+    function redirecionarId() { // Função para redirecionar para o primeiro jogo encontrada
+        
+        const input = document.getElementById('search-input'); // Captura o valor do campo de busca   
+        const filter = input.value.toLowerCase(); // Transforma o texto de busca em minúsculas
+
+        // Filtra os jogos que correspondem ao texto da busca
+        const filteredGames = jogos.filter(game => game.nome.toLowerCase().includes(filter));
+
+        // Se houver jogos correspondentes
+        if (filteredGames.length) {
+            
+            const firstGame = filteredGames[0]; // Captura o primeiro jogo correspondente
+
+            // Redireciona até a seção do primeiro jogo encontrado através do id
+            document.getElementById(firstGame.id).scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Evento para capturar a entrada do usuário no campo de busca
+    document.getElementById('search-input').addEventListener('input', mostrarResultados);
+
+    // Evento para capturar o clique do botão de busca
+    document.getElementById('search-button').addEventListener('click', function(event) {
+        event.preventDefault();
+        redirecionarId();
+    });
+
+    // Evento para ocultar os resultados da busca ao clicar fora do campo de busca
+    document.addEventListener('click', function(event) {
+        const searchForm = document.querySelector('.search-form');
+        if (!searchForm.contains(event.target)) {
+            document.getElementById('search-results').style.display = 'none';
+        }
+    });
+ 

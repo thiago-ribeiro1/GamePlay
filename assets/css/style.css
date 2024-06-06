@@ -692,3 +692,26 @@ Go Top CSS
   border: none;
   margin-bottom: 20px;
 }
+
+/* Estilização da barra de pesquisa e resultados */
+.search-form {
+  position: relative;
+}
+
+#search-results {
+  position: absolute;
+  top: 100%;
+  left: 0; /* Alinhar os resultados à esquerda do campo de pesquisa */
+  right: 0; /* Estender os resultados até a borda direita do campo de pesquisa */
+  z-index: 1000;
+  display: none;
+  background: white;
+  border: 1px solid #ccc; /* Adiciona uma borda aos resultados */
+  max-height: 200px; /* Limita a altura máxima dos resultados para 200px, adicionando uma barra de rolagem se necessário */
+  overflow-y: auto;
+}
+
+/* Estilização dos itens da lista de resultados de pesquisa */
+#search-results .list-group-item {
+  cursor: pointer; /* Define o cursor para indicar que o item é clicável */
+} 

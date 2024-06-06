@@ -60,6 +60,13 @@
                                 </li>
                             </ul>
                         </div>
+                        <!-- Início da barra de pesquisa Bootstrap -->
+                        <form class="d-flex ms-auto search-form" role="search" onsubmit="return false;">
+                            <input class="form-control me-2" type="search" placeholder="Busque por produtos" aria-label="Search" id="search-input">
+                            <button class="btn btn-outline-success" type="button" id="search-button">Buscar</button>
+                            <div id="search-results" class="list-group"></div>
+                        </form>
+                        <!-- Fim da barra de pesquisa -->
                     </nav>
                 </div> 
             </div>
