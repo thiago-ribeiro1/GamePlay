@@ -184,7 +184,7 @@
                                     <h6>R$252,90</h6>
                                     <div id="estoque1">Estoque: 25</div>
                                     <button class="btn btn-primary" onclick="venderProduto(1)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProduto(1)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>             
                             </div>
                         </div>
@@ -206,7 +206,7 @@
                                     <h6>R$175,95</h6>
                                     <div id="estoque2">Estoque: 30</div>
                                     <button class="btn btn-primary" onclick="venderProduto(2)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProduto(2)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>
                             </div>
                         </div>
@@ -228,7 +228,7 @@
                                     <h6>R$220,99</h6>
                                     <div id="estoque3">Estoque: 40</div>
                                     <button class="btn btn-primary" onclick="venderProduto(3)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProduto(3)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>              
                             </div>
                         </div>
@@ -250,7 +250,7 @@
                                     <h6>R$361,35</h6>
                                     <div id="estoque4">Estoque: 35</div>
                                     <button class="btn btn-primary" onclick="venderProduto(4)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProduto(4)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>          
                             </div>
                         </div>
@@ -272,7 +272,7 @@
                                     <h6>R$244,99</h6>
                                     <div id="estoque5">Estoque: 25</div>
                                     <button class="btn btn-primary" onclick="venderProduto(5)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProduto(5)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>        
                             </div>
                         </div>
@@ -294,7 +294,7 @@
                                     <h6>R$329,99</h6>
                                     <div id="estoque6">Estoque: 20</div>
                                     <button class="btn btn-primary" onclick="venderProduto(6)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProduto(6)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>        
                             </div>
                         </div>
@@ -325,7 +325,32 @@
                     alert("Quantidade de venda excede o estoque disponível."); // alerta se a quantidade digitada for maior que o estoque 
                 }
             }
+
+
+            //script para adicionar produtos ao estoque no PS5
+            function adicionarProduto(produtoId) {
+                // Solicita ao usuário a quantidade a ser adicionada
+                var quantidade = prompt("Qual a quantidade de produtos a ser adicionado ? ")
+                // Converte a entrada do usuário para um número inteiro
+                quantidade = parseInt(quantidade)
+
+                var estoqueElement = document.getElementById("estoque" + produtoId) // Acessar o estoque do produto por ID
+                // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
+                var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1])
+
+                if (quantidade > 0 ) { // verifica se a quantidade digitada é maior que zero
+                    var adicionarEstoque = estoqueAtual + quantidade // cálculo para novo estoque após ser adicionado novos produtos
+                    estoqueElement.textContent = "Estoque: " + adicionarEstoque; // Atualiza o texto do elemento HTML com o novo estoque
+                    alert("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+                    console.log("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+                }
+                else {
+                    alert("Quantidade para ser adicionada é menor que zero, digite uma opção valida.") // alerta se a quantidade digitada for menor que zero
+                }
+            }
+           
         </script>
+        
 
         <!-- Jogos PlayStation 4 -->
         <section id="playstation4" class="products-area pt-100 pb-70">
@@ -351,7 +376,7 @@
                                     <h6>R$110,90</h6>
                                     <div id="estoque-ps4-1">Estoque: 45</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPS4(1)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(1)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>          
                             </div>
                         </div>
@@ -373,7 +398,7 @@
                                     <h6>R$49,90</h6>
                                     <div id="estoque-ps4-2">Estoque: 25</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPS4(2)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(2)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>
                             </div>
                         </div>
@@ -395,7 +420,7 @@
                                     <h6>R$149,50</h6>
                                     <div id="estoque-ps4-3">Estoque: 15</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPS4(3)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(3)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>        
                             </div>
                         </div>
@@ -417,7 +442,7 @@
                                     <h6>R$99,90</h6>
                                     <div id="estoque-ps4-4">Estoque: 20</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPS4(4)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(4)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>        
                             </div>
                         </div>
@@ -439,7 +464,7 @@
                                     <h6>R$110,00</h6>
                                     <div id="estoque-ps4-5">Estoque: 20</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPS4(5)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(5)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>       
                             </div>
                         </div>
@@ -461,7 +486,7 @@
                                     <h6>R$100,00</h6>
                                     <div id="estoque-ps4-6">Estoque: 35</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPS4(6)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(6)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>                 
                             </div>
                         </div>
@@ -492,6 +517,29 @@
                     alert("Quantidade de venda excede o estoque disponível."); // alerta se a quantidade digitada for maior que o estoque 
                 }
             }
+
+
+             //script para adicionar produtos ao estoque no PS4
+             function adicionarProdutoPS4(produtoId) {
+                // Solicita ao usuário a quantidade a ser adicionada 
+                var quantidade = prompt("Qual a quantidade de produtos a ser adicionado ? ")
+                // Converte a entrada do usuário para um número inteiro
+                quantidade = parseInt(quantidade)
+
+                var estoqueElement = document.getElementById("estoque-ps4-" + produtoId) // Acessar o estoque do produto por ID
+                // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
+                var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1])
+
+                if (quantidade > 0 ) { // verifica se a quantidade digitada é maior que zero
+                    var adicionarEstoque = estoqueAtual + quantidade // cálculo para novo estoque após ser adicionado novos produtos
+                    estoqueElement.textContent = "Estoque: " + adicionarEstoque; // Atualiza o texto do elemento HTML com o novo estoque
+                    alert("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-ps4-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+                    console.log("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-ps4-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+                }
+                else {
+                    alert("Quantidade para ser adicionada é menor que zero, digite uma opção valida.") // alerta se a quantidade digitada for menor que zero
+                }
+            }
         </script>
 
         <!-- Jogos PC -->
@@ -518,7 +566,7 @@
                                     <h6>R$9,99</h6>
                                     <div id="estoque-pc-1">Estoque: 55</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPC(1)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(1)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>       
                             </div>
                         </div>
@@ -540,7 +588,7 @@
                                     <h6>R$194,99</h6>
                                     <div id="estoque-pc-2">Estoque: 105</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPC(2)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(2)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>
                             </div>
                         </div>
@@ -562,7 +610,7 @@
                                     <h6>R$9,99</h6>
                                     <div id="estoque-pc-3">Estoque: 55</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPC(3)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(3)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>      
                             </div>
                         </div>
@@ -584,7 +632,7 @@
                                     <h6>R$249,99</h6>
                                     <div id="estoque-pc-4">Estoque: 65</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPC(4)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(4)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>     
                             </div>
                         </div>
@@ -606,7 +654,7 @@
                                     <h6>R$199,99</h6>
                                     <div id="estoque-pc-5">Estoque: 45</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPC(5)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(5)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>     
                             </div>
                         </div>
@@ -628,7 +676,7 @@
                                     <h6>R$20,99</h6>
                                     <div id="estoque-pc-6">Estoque: 45</div>
                                     <button class="btn btn-primary" onclick="venderProdutoPC(6)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" style="background-color: green;">Adicionar Estoque</button>
+                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(6)" style="background-color: green;">Adicionar Estoque</button>
                                 </div>                 
                             </div>
                         </div>
@@ -659,6 +707,31 @@
                     alert("Quantidade de venda excede o estoque disponível."); // alerta se a quantidade digitada for maior que o estoque 
                 }
             }
+
+
+             //script para adicionar produtos ao estoque no PC
+             function adicionarProdutoPC(produtoId) {
+                // Solicita ao usuário a quantidade a ser adicionada
+                var quantidade = prompt("Qual a quantidade de produtos a ser adicionado ? ")
+                // Converte a entrada do usuário para um número inteiro
+                quantidade = parseInt(quantidade)
+
+                var estoqueElement = document.getElementById("estoque-pc-" + produtoId) // Acessar o estoque do produto por ID
+                // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
+                var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1])
+
+                if (quantidade > 0 ) { // verifica se a quantidade digitada é maior que zero
+                    var adicionarEstoque = estoqueAtual + quantidade // cálculo para novo estoque após ser adicionado novos produtos
+                    estoqueElement.textContent = "Estoque: " + adicionarEstoque; // Atualiza o texto do elemento HTML com o novo estoque
+                    alert("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-pc-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+                    console.log("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-pc-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+                }
+                else {
+                    alert("Quantidade para ser adicionada é menor que zero, digite uma opção valida.") // alerta se a quantidade digitada for menor que zero
+                }
+            }
+
+
         </script>
 
         <!-- Footer -->  
