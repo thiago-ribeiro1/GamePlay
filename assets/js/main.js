@@ -1,3 +1,5 @@
+
+ // Funcionalidade 7
 (function($){
     "use strict";
     
@@ -12,7 +14,7 @@
     // Torna a barra de navegação fixa
     // Quando a posição de rolagem da janela ultrapassa 130 pixels a partir do topo, a classe "is-sticky" é adicionada à barra de navegação
     $(window).on('scroll',function() {
-        if ($(this).scrollTop() > 130){  
+        if ($(this).scrollTop() > 130){  // Utilização de Operadores
             $('.header-sticky').addClass("is-sticky");
         }
         else{
@@ -33,6 +35,7 @@
         c = currentScrollTop;
     });
 
+    //Funcionalidade 8
     // Voltar ao início
     $(function(){ 
         $(window).on('scroll', function(){
@@ -59,6 +62,7 @@
  
 }(jQuery));
 
+    // Função com Array 1
     // Lista de jogos com seus respectivos IDs de seção
     const jogos = [
         { nome: "EA FC 24", id: "playstation5" }, // nome do jogo e id da seção onde tá localizado no html
@@ -80,11 +84,12 @@
         { nome: "Minecraft", id: "pc" },
         { nome: "Among Us", id: "pc" }
     ]; 
-
+    // Funcionalidade 9
     // Função para mostrar resultados da pesquisa
     function mostrarResultados() {
         
         const input = document.getElementById('search-input'); // Captura o valor digitado no campo de busca
+        // Funções com Strings toLowerCase()
         const filter = input.value.toLowerCase(); // Transforma o texto de busca em letras minúsculas
         const results = document.getElementById('search-results'); // Captura o elemento que exibirá os resultados da busca
         results.innerHTML = ''; // Limpa os resultados anteriores
@@ -92,6 +97,7 @@
         // Se houver texto na busca
         if (filter) {
             // Filtra os jogos que correspondem ao texto da busca
+            // Funções com Strings toLowerCase()
             const filteredGames = jogos.filter(game => game.nome.toLowerCase().includes(filter));
             
             // Se houver jogos correspondentes
@@ -103,6 +109,7 @@
                     item.textContent = game.nome;
                     item.href = `#${game.id}`;
 
+                    // Adição de Eventos
                     // Adiciona um evento de clique para redirecionar até a seção do jogo pesquisado
                     item.addEventListener('click', function(event) {
                         event.preventDefault();
@@ -123,7 +130,7 @@
         }
     }
 
-    
+    // Funcionalidade 10
     function redirecionarId() { // Função para redirecionar para o primeiro jogo encontrada
         
         const input = document.getElementById('search-input'); // Captura o valor do campo de busca   
@@ -140,8 +147,8 @@
             // Redireciona até a seção do primeiro jogo encontrado através do id
             document.getElementById(firstGame.id).scrollIntoView({ behavior: 'smooth' });
         }
-    }
-
+    } 
+    // Adição de Eventos
     // Evento para capturar a entrada do usuário no campo de busca
     document.getElementById('search-input').addEventListener('input', mostrarResultados);
 
