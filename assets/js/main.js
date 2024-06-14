@@ -1,5 +1,5 @@
 
- // Funcionalidade 7
+ // Funcionalidade 7 menu responsivo hamburguer
 (function($){
     "use strict";
     
@@ -10,11 +10,12 @@
         meanScreenWidth: "991"
     });
 
+    // Funcionalidade 8 barra de navegação aparece quando a posição de rolagem da janela ultrapassa 130 pixels a partir do topo (0px)
     // Header Sticky  
     // Torna a barra de navegação fixa
     // Quando a posição de rolagem da janela ultrapassa 130 pixels a partir do topo, a classe "is-sticky" é adicionada à barra de navegação
     $(window).on('scroll',function() {
-        if ($(this).scrollTop() > 130){  // Utilização de Operadores
+        if ($(this).scrollTop() > 130){  // Utilização de Operadores >
             $('.header-sticky').addClass("is-sticky");
         }
         else{
@@ -35,7 +36,7 @@
         c = currentScrollTop;
     });
 
-    //Funcionalidade 8
+    //Funcionalidade 9 Se o scroll estiver maior que 300 pixels, aparece o botão de voltar ao topo da página
     // Voltar ao início
     $(function(){ 
         $(window).on('scroll', function(){
@@ -62,7 +63,7 @@
  
 }(jQuery));
 
-    // Função com Array 1
+    // Função com Array 1 lista de jogos barra de busca
     // Lista de jogos com seus respectivos IDs de seção
     const jogos = [
         { nome: "EA FC 24", id: "playstation5" }, // nome do jogo e id da seção onde tá localizado no html
@@ -84,7 +85,7 @@
         { nome: "Minecraft", id: "pc" },
         { nome: "Among Us", id: "pc" }
     ]; 
-    // Funcionalidade 9
+    // Funcionalidade 10
     // Função para mostrar resultados da pesquisa
     function mostrarResultados() {
         
@@ -109,7 +110,7 @@
                     item.textContent = game.nome;
                     item.href = `#${game.id}`;
 
-                    // Adição de Eventos
+                    // Adição de Eventos 
                     // Adiciona um evento de clique para redirecionar até a seção do jogo pesquisado
                     item.addEventListener('click', function(event) {
                         event.preventDefault();
@@ -127,10 +128,10 @@
         } else {
             // Esconde os resultados se a busca estiver vazia
             results.style.display = 'none';
-        }
+        } 
     }
 
-    // Funcionalidade 10
+    // Funcionalidade 11
     function redirecionarId() { // Função para redirecionar para o primeiro jogo encontrada
         
         const input = document.getElementById('search-input'); // Captura o valor do campo de busca   
