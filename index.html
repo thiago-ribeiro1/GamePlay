@@ -1,808 +1,892 @@
 <!doctype html>
 <html lang="pt-BR">
-    <head>
-        <!-- Meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet"> <!-- Font Poetsen One -->
-        <meta name="description" content="GamePlay Loja Virtual">
-        <meta name="keywords" content="games, gaming, store, comprar jogos, jogos, ps4, ps5, pc, PlayStation, Steam">
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/boxicons.min.css">
-        <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <!-- Font Poetsen One -->
+    <meta name="description" content="GamePlay Loja Virtual">
+    <meta name="keywords" content="games, gaming, store, comprar jogos, jogos, ps4, ps5, pc, PlayStation, Steam">
 
-        <!-- ==== Título da Página ==== --> 
-        <title>GamePlay</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-        <link rel="icon" type="image/png" href="assets/img/icon.ico"> <!-- Ícone -->
-    </head>
-    <body>
-        
-        <!-- Início Navbar -->
-        <div id="inicio" class="navbar-area">
-            <div class="xton-responsive-nav">
-                <div class="container">
-                    <div class="xton-responsive-menu">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="assets/img/logo_gameplay.png" class="main-logo" alt="logo" width="142px" height="44px">
+
+    <!-- ==== Título da Página ==== -->
+    <title>GamePlay</title>
+
+    <link rel="icon" type="image/png" href="assets/img/icon.ico"> <!-- Ícone -->
+</head>
+
+<body>
+
+    <!-- Início Navbar -->
+    <div id="inicio" class="navbar-area">
+        <div class="xton-responsive-nav">
+            <div class="container">
+                <div class="xton-responsive-menu">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/img/logo_gameplay.png" class="main-logo" alt="logo" width="142px"
+                                height="44px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="xton-nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo_gameplay.png" class="main-logo" alt="logo" width="142px"
+                            height="44px">
+                    </a>
+
+                    <div class="collapse navbar-collapse mean-menu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a></li>
+                            <!-- Início -->
+
+                            <li class="nav-item"><a href="#" class="nav-link">Jogos<i
+                                        class='bx bx-chevron-down'></i></a> <!-- Jogos -->
+                                <ul class="dropdown-menu"> <!-- Dropdown -->
+                                    <li class="nav-item"><a href="#playstation5" class="nav-link">PlayStation 5</a></li>
+                                    <li class="nav-item"><a href="#playstation4" class="nav-link">PlayStation 4</a></li>
+                                    <li class="nav-item"><a href="#pc" class="nav-link">PC</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Início da barra de pesquisa Bootstrap -->
+                    <form class="d-flex ms-auto search-form" role="search" onsubmit="return false;">
+                        <input class="form-control me-2" type="search" placeholder="Busque por produtos"
+                            aria-label="Search" id="search-input">
+                        <button class="btn btn-outline-success" type="button" id="search-button">Buscar</button>
+                        <div id="search-results" class="list-group"></div>
+                    </form>
+                    <!-- Fim da barra de pesquisa -->
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Navbar -->
+
+    <!-- Navbar Fixo -->
+    <div class="navbar-area header-sticky">
+        <div class="xton-nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="index-2.html">
+                        <img src="assets/img/logo_gameplay.png" alt="logo" width="142px" height="44px">
+                    </a>
+
+                    <div class="collapse navbar-collapse mean-menu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a> <!-- Início -->
+                            </li>
+
+                            <li class="nav-item"><a href="#" class="nav-link">Jogos <i
+                                        class='bx bx-chevron-down'></i></a> <!-- Jogos -->
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a href="#playstation5" class="nav-link">PlayStation 5</a></li>
+                                    <li class="nav-item"><a href="#playstation4" class="nav-link">PlayStation 4</a></li>
+                                    <li class="nav-item"><a href="#pc" class="nav-link">PC</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Navbar Fixo -->
+
+    <!-- Página Inicial -->
+    <div class="banner-bg"> <!-- /* Imagem Tela Inicial (CSS)  */ -->
+        <h1 class="texto-inicio">GamePlay</h1>
+    </div>
+    <!-- Fim Página Inicial -->
+
+    <!-- Início Jogos Mais Vendidos -->
+    <section class="categorias-banner-area pt-100 pb-70">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="categorias-box">
+                        <img src="assets/img/mais-vendidos/img5.jpg" alt="Red Dead Redemption 2 Banner">
+
+                        <div class="content">
+                            <h3>Mais Vendidos</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="categorias-box">
+                                <img src="assets/img/mais-vendidos/img6.jpg" alt="The Last Of Us Part II Banner">
+
+                                <div class="content">
+                                    <h3>The Last of Us Part II</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="categorias-box">
+                                <img src="assets/img/mais-vendidos/img7.jpg" alt="EA FC 24 Banner">
+
+                                <div class="content">
+                                    <h3>EA FC 24</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="categorias-box">
+                                <img src="assets/img/mais-vendidos/img8.jpg" alt="Assassin's Creed Mirage Banner">
+
+                                <div class="content">
+                                    <h3>Assassin's Creed Mirage</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fim Jogos Mais Vendidos -->
+
+    <!-- Jogos PlayStation 5 -->
+    <section id="playstation5" class="products-area pb-70">
+        <div class="container">
+            <div class="section-title">
+                <h2>PlayStation 5</h2>
+            </div>
+
+            <!-- Produto 1 -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/FC24.jpg" class="main-image" alt="EA FC 24 PS5">
+                                <img src="assets/img/jogos/FC24.jpg" class="hover-image" alt="EA FC 24 PS5">
                             </a>
                         </div>
+                        <div class="jogos">
+                            <span class="category">EA (FC 24) - PS5 (Mídia Digital)</span>
+                            <h3 id="produto1"><a>EA FC 24</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$252,90</h6>
+                                <div id="estoque1">Estoque: 25</div>
+                                <button class="btn btn-primary" onclick="venderProduto(1)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProduto(1)"
+                                    style="background-color: green;">Adicionar Estoque</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/nfs-unbound.jpg" class="main-image"
+                                    alt="Need For Speed Unbound PS5">
+                                <img src="assets/img/jogos/nfs-unbound.jpg" class="hover-image"
+                                    alt="Need For Speed Unbound PS5">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Need For Speed Unbound - PS5 (Mídia Digital)</span>
+                            <h3 id="produto2"><a>Need For Speed Unbound</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$175,95</h6>
+                                <div id="estoque2">Estoque: 30</div>
+                                <button class="btn btn-primary" onclick="venderProduto(2)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProduto(2)"
+                                    style="background-color: green;">Adicionar Estoque</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/hogwarts-legacy.jpg" class="main-image"
+                                    alt="Hogwarts Legacy PS5">
+                                <img src="assets/img/jogos/hogwarts-legacy.jpg" class="hover-image"
+                                    alt="Hogwarts Legacy PS5">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Hogwarts Legacy - PS5 (Mídia Digital)</span>
+                            <h3 id="produto3"><a>Hogwarts Legacy</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$220,99</h6>
+                                <div id="estoque3">Estoque: 40</div>
+                                <button class="btn btn-primary" onclick="venderProduto(3)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProduto(3)"
+                                    style="background-color: green;">Adicionar Estoque</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/cod-modern-warfare.jpg" class="main-image"
+                                    alt="Call of Duty: Modern Warfare III PS5">
+                                <img src="assets/img/jogos/cod-modern-warfare.jpg" class="hover-image"
+                                    alt="Call of Duty: Modern Warfare III PS5">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Call of Duty: Modern Warfare III - PS5 (Mídia Digital)</span>
+                            <h3 id="produto4"><a>Call of Duty: Modern Warfare III</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$361,35</h6>
+                                <div id="estoque4">Estoque: 35</div>
+                                <button class="btn btn-primary" onclick="venderProduto(4)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProduto(4)"
+                                    style="background-color: green;">Adicionar Estoque</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 5 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/assassins-creed-mirage.jpg" class="main-image"
+                                    alt="Assassin's Creed Mirage PS5">
+                                <img src="assets/img/jogos/assassins-creed-mirage.jpg" class="hover-image"
+                                    alt="Assassin's Creed Mirage PS5">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Assassin's Creed Mirage - PS5 (Mídia Digital)</span>
+                            <h3 id="produto5"><a>Assassin's Creed Mirage </a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$244,99</h6>
+                                <div id="estoque5">Estoque: 25</div>
+                                <button class="btn btn-primary" onclick="venderProduto(5)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProduto(5)"
+                                    style="background-color: green;">Adicionar Estoque</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 6 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/spider-man2.jpg" class="main-image" alt="Spider Man 2 PS5">
+                                <img src="assets/img/jogos/spider-man2.jpg" class="hover-image" alt="Spider Man 2 PS5">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Spider Man 2 - PS5 (Mídia Digital)</span>
+                            <h3 id="produto6"><a>Spider Man 2</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$329,99</h6>
+                                <div id="estoque6">Estoque: 20</div>
+                                <button class="btn btn-primary" onclick="venderProduto(6)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProduto(6)"
+                                    style="background-color: green;">Adicionar Estoque</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="xton-nav">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="assets/img/logo_gameplay.png" class="main-logo" alt="logo" width="142px" height="44px">
-                        </a>
-
-                        <div class="collapse navbar-collapse mean-menu">
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a></li> <!-- Início -->
-
-                                <li class="nav-item"><a href="#" class="nav-link">Jogos<i class='bx bx-chevron-down'></i></a> <!-- Jogos -->
-                                    <ul class="dropdown-menu"> <!-- Dropdown -->
-                                        <li class="nav-item"><a href="#playstation5" class="nav-link">PlayStation 5</a></li>
-                                        <li class="nav-item"><a href="#playstation4" class="nav-link">PlayStation 4</a></li>
-                                        <li class="nav-item"><a href="#pc" class="nav-link">PC</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Início da barra de pesquisa Bootstrap -->
-                        <form class="d-flex ms-auto search-form" role="search" onsubmit="return false;">
-                            <input class="form-control me-2" type="search" placeholder="Busque por produtos" aria-label="Search" id="search-input">
-                            <button class="btn btn-outline-success" type="button" id="search-button">Buscar</button>
-                            <div id="search-results" class="list-group"></div>
-                        </form>
-                        <!-- Fim da barra de pesquisa -->
-                    </nav>
-                </div> 
-            </div>
-        </div> 
-        <!-- Fim Navbar -->
-
-        <!-- Navbar Fixo -->
-        <div class="navbar-area header-sticky">
-            <div class="xton-nav">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="index-2.html">
-                            <img src="assets/img/logo_gameplay.png" alt="logo" width="142px" height="44px">
-                        </a>
-
-                        <div class="collapse navbar-collapse mean-menu">
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a> <!-- Início -->
-                                </li>
-
-                                <li class="nav-item"><a href="#" class="nav-link">Jogos <i class='bx bx-chevron-down'></i></a> <!-- Jogos -->
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a href="#playstation5" class="nav-link">PlayStation 5</a></li>
-                                        <li class="nav-item"><a href="#playstation4" class="nav-link">PlayStation 4</a></li>
-                                        <li class="nav-item"><a href="#pc" class="nav-link">PC</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div> 
-                    </nav>
-                </div> 
-            </div> 
-        </div> 
-        <!-- Fim Navbar Fixo --> 
-
-        <!-- Página Inicial -->
-        <div class="banner-bg"> <!-- /* Imagem Tela Inicial (CSS)  */ -->
-            <h1 class="texto-inicio">GamePlay</h1>
         </div>
-        <!-- Fim Página Inicial -->
+    </section>
+    <!-- Fim Jogos PlayStation 5 -->
 
-        <!-- Início Jogos Mais Vendidos -->
-        <section class="categorias-banner-area pt-100 pb-70">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="categorias-box">
-                            <img src="assets/img/mais-vendidos/img5.jpg" alt="Red Dead Redemption 2 Banner">
+    <script>
+        // Funcionalidade 1 informar venda de produtos 
+        // script para venda de produto em estoque PS5
+        async function venderProduto(produtoId) {
+            // Solicita ao usuário a quantidade a ser vendida
+            var quantidade = prompt("Quanto do estoque foi vendido? ");
+            // Converte a entrada do usuário para um número inteiro
+            quantidade = parseInt(quantidade);
 
-                            <div class="content">
-                                <h3>Mais Vendidos</h3>
+            var estoqueElement = document.getElementById("estoque" + produtoId); // Acessar o estoque do produto por ID
+            // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
+            var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1]); // Funções com Strings split
+
+            // Utilização de Operadores <=
+            if (quantidade <= estoqueAtual) { // verifica se a quantidade digitada é menor ou igual ao estoque 
+                var novoEstoque = estoqueAtual - quantidade; // cálculo para novo estoque após venda
+                estoqueElement.textContent = "Estoque: " + novoEstoque; // Atualiza o texto do elemento HTML com o novo estoque
+
+                // atraso de 3000 milissegundos (3 segundos) antes de exibir o alerta
+                await new Promise(resolve => setTimeout(resolve, 3000));
+
+                alert("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + novoEstoque + " itens");
+                console.log("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + novoEstoque + " itens");
+            } else {
+                alert("Quantidade de venda excede o estoque disponível."); // alerta se a quantidade digitada for maior que o estoque 
+            }
+        }
+
+        // Funcionalidade 2 adicionar estoque
+        //script para adicionar produtos ao estoque no PS5
+        function adicionarProduto(produtoId) {
+            // Solicita ao usuário a quantidade a ser adicionada
+            var quantidade = prompt("Qual a quantidade de produtos a ser adicionado ? ")
+            // Converte a entrada do usuário para um número inteiro
+            quantidade = parseInt(quantidade)
+
+            var estoqueElement = document.getElementById("estoque" + produtoId) // Acessar o estoque do produto por ID
+            // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
+            var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1])
+
+            // Utilização de Operadores >
+            if (quantidade > 0) { // verifica se a quantidade digitada é maior que zero
+                var adicionarEstoque = estoqueAtual + quantidade // cálculo para novo estoque após ser adicionado novos produtos
+                estoqueElement.textContent = "Estoque: " + adicionarEstoque; // Atualiza o texto do elemento HTML com o novo estoque
+                // Comandos de saída
+                alert("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+                console.log("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+            }
+            else {
+                alert("Quantidade para ser adicionada é menor que zero, digite uma opção valida.") // alerta se a quantidade digitada for menor que zero
+            }
+        }
+
+    </script>
+
+
+    <!-- Jogos PlayStation 4 -->
+    <section id="playstation4" class="products-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <h2>PlayStation 4</h2>
+            </div>
+
+            <!-- Produto 1 -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/red-dead-2.jpg" class="main-image"
+                                    alt="Red Dead Redemption 2 PS4">
+                                <img src="assets/img/jogos/red-dead-2.jpg" class="hover-image"
+                                    alt="Red Dead Redemption 2 PS4">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Red Dead Redemption 2 - PS4</span>
+                            <h3 id="produto-ps4-1"><a>Red Dead Redemption 2</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$110,90</h6>
+                                <div id="estoque-ps4-1">Estoque: 45</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPS4(1)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPS4(1)"
+                                    style="background-color: green;">Adicionar Estoque</button>
                             </div>
-                        </div> 
+                        </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-6 col-md-12">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="categorias-box">
-                                    <img src="assets/img/mais-vendidos/img6.jpg" alt="The Last Of Us Part II Banner">
-        
-                                    <div class="content">
-                                        <h3>The Last of Us Part II</h3>
-                                    </div>
-                                </div>
+                <!-- Produto 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/fallout-4.jpg" class="main-image" alt="Fallout PS4">
+                                <img src="assets/img/jogos/fallout-4.jpg" class="hover-image" alt="Fallout PS4">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Fallout - PS4</span>
+                            <h3 id="produto-ps4-2"><a>Fallout</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$49,90</h6>
+                                <div id="estoque-ps4-2">Estoque: 25</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPS4(2)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPS4(2)"
+                                    style="background-color: green;">Adicionar Estoque</button>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="categorias-box">
-                                    <img src="assets/img/mais-vendidos/img7.jpg" alt="EA FC 24 Banner">
-        
-                                    <div class="content">
-                                        <h3>EA FC 24</h3>
-                                    </div>
-                                </div>
+                <!-- Produto 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/dishonored-2.jpg" class="main-image" alt="Dishonored 2 PS4">
+                                <img src="assets/img/jogos/dishonored-2.jpg" class="hover-image" alt="Dishonored 2 PS4">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Dishonored 2 - PS4</span>
+                            <h3 id="produto-ps4-3"><a>Dishonored 2</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$149,50</h6>
+                                <div id="estoque-ps4-3">Estoque: 15</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPS4(3)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPS4(3)"
+                                    style="background-color: green;">Adicionar Estoque</button>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <div class="col-lg-12 col-md-12">
-                                <div class="categorias-box">
-                                    <img src="assets/img/mais-vendidos/img8.jpg" alt="Assassin's Creed Mirage Banner">
-        
-                                    <div class="content">
-                                        <h3>Assassin's Creed Mirage</h3>
-                                    </div> 
-                                </div>
+                <!-- Produto 4 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/bloodborne.jpg" class="main-image" alt="Bloodborne PS4">
+                                <img src="assets/img/jogos/bloodborne.jpg" class="hover-image" alt="Bloodborne PS4">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Bloodborne - PS4</span>
+                            <h3 id="produto-ps4-4"><a>Bloodborne</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$99,90</h6>
+                                <div id="estoque-ps4-4">Estoque: 20</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPS4(4)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPS4(4)"
+                                    style="background-color: green;">Adicionar Estoque</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 5 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/shadow-of-the-colossus.jpg" class="main-image"
+                                    alt="Shadow Of The Colossus PS4">
+                                <img src="assets/img/jogos/shadow-of-the-colossus.jpg" class="hover-image"
+                                    alt="Shadow Of The Colossus PS4">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Shadow of the Colossus - PS4</span>
+                            <h3 id="produto-ps4-5"><a>Shadow of the Colossus</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$110,00</h6>
+                                <div id="estoque-ps4-5">Estoque: 20</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPS4(5)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPS4(5)"
+                                    style="background-color: green;">Adicionar Estoque</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 6 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/detroit.jpg" class="main-image"
+                                    alt="Detroit Become Human PS4">
+                                <img src="assets/img/jogos/detroit.jpg" class="hover-image"
+                                    alt="Detroit Become Human PS4">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Detroit: Become Human - PS4</span>
+                            <h3 id="produto-ps4-6"><a>Detroit: Become Human</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$100,00</h6>
+                                <div id="estoque-ps4-6">Estoque: 35</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPS4(6)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPS4(6)"
+                                    style="background-color: green;">Adicionar Estoque</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Fim Jogos Mais Vendidos -->
+        </div>
+    </section>
+    <!-- Fim Jogos PlayStation 4 -->
 
-        <!-- Jogos PlayStation 5 -->
-        <section id="playstation5" class="products-area pb-70">
-            <div class="container">
-                <div class="section-title">
-                    <h2>PlayStation 5</h2>
-                </div> 
+    <script>
+        // Funcionalidade 3
+        // script para venda de produto em estoque PS4
+        async function venderProdutoPS4(produtoId) {
+            // Solicita ao usuário a quantidade a ser vendida
+            var quantidade = prompt("Quanto do estoque foi vendido? ");
+            // Converte a entrada do usuário para um número inteiro
+            quantidade = parseInt(quantidade);
 
-                <!-- Produto 1 -->
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/FC24.jpg" class="main-image" alt="EA FC 24 PS5">
-                                    <img src="assets/img/jogos/FC24.jpg" class="hover-image" alt="EA FC 24 PS5">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">EA (FC 24) - PS5 (Mídia Digital)</span>
-                                <h3 id="produto1"><a>EA FC 24</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$252,90</h6>
-                                    <div id="estoque1">Estoque: 25</div>
-                                    <button class="btn btn-primary" onclick="venderProduto(1)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProduto(1)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>             
+            var estoqueElement = document.getElementById("estoque-ps4-" + produtoId); // Acessar o estoque do produto por ID
+            // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
+            var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1]);
+
+            if (quantidade <= estoqueAtual) { // verifica se a quantidade digitada é menor ou igual ao estoque 
+                var novoEstoque = estoqueAtual - quantidade; // cálculo para novo estoque após venda
+                estoqueElement.textContent = "Estoque: " + novoEstoque; // Atualiza o texto do elemento HTML com o novo estoque
+
+                // atraso de 3000 milissegundos (3 segundos) antes de exibir o alerta
+                await new Promise(resolve => setTimeout(resolve, 3000));
+
+                // Comandos de saída
+                alert("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto-ps4-" + produtoId).textContent + ": " + novoEstoque + " itens");
+                console.log("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto-ps4-" + produtoId).textContent + ": " + novoEstoque + "itens");
+            } else {
+                alert("Quantidade de venda excede o estoque disponível."); // alerta se a quantidade digitada for maior que o estoque 
+            }
+        }
+
+        // Funcionalidade 4
+        //script para adicionar produtos ao estoque no PS4
+        function adicionarProdutoPS4(produtoId) {
+            // Solicita ao usuário a quantidade a ser adicionada 
+            var quantidade = prompt("Qual a quantidade de produtos a ser adicionado ? ")
+            // Converte a entrada do usuário para um número inteiro
+            quantidade = parseInt(quantidade)
+
+            var estoqueElement = document.getElementById("estoque-ps4-" + produtoId) // Acessar o estoque do produto por ID
+            // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
+            var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1])
+
+            if (quantidade > 0) { // verifica se a quantidade digitada é maior que zero
+                var adicionarEstoque = estoqueAtual + quantidade // cálculo para novo estoque após ser adicionado novos produtos
+                estoqueElement.textContent = "Estoque: " + adicionarEstoque; // Atualiza o texto do elemento HTML com o novo estoque
+                alert("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-ps4-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+                console.log("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-ps4-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+            }
+            else {
+                alert("Quantidade para ser adicionada é menor que zero, digite uma opção valida.") // alerta se a quantidade digitada for menor que zero
+            }
+        }
+    </script>
+
+    <!-- Jogos PC -->
+    <section id="pc" class="products-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <h2>Jogos PC</h2>
+            </div>
+
+            <!-- Produto 1 -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/lol_3-pc.jpg" class="main-image" alt="League of Legends PC">
+                                <img src="assets/img/jogos/lol_3-pc.jpg" class="hover-image" alt="League of Legends PC">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">League of Legends - PC</span>
+                            <h3 id="produto-pc-1"><a>League of Legends</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$9,99</h6>
+                                <div id="estoque-pc-1">Estoque: 55</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPC(1)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPC(1)"
+                                    style="background-color: green;">Adicionar Estoque</button>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Produto 2 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/nfs-unbound.jpg" class="main-image" alt="Need For Speed Unbound PS5">
-                                    <img src="assets/img/jogos/nfs-unbound.jpg" class="hover-image" alt="Need For Speed Unbound PS5">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Need For Speed Unbound - PS5 (Mídia Digital)</span>
-                                <h3 id="produto2"><a>Need For Speed Unbound</a></h3> <!-- a:hover -->      
-                                <div class="preco">
-                                    <h6>R$175,95</h6>
-                                    <div id="estoque2">Estoque: 30</div>
-                                    <button class="btn btn-primary" onclick="venderProduto(2)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProduto(2)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>
+                <!-- Produto 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/cod_warzone.jpg" class="main-image" alt="Warzone">
+                                <img src="assets/img/jogos/cod_warzone.jpg" class="hover-image" alt="Warzone">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Call of Duty: Warzone 2 - PC</span>
+                            <h3 id="produto-pc-2"><a>Call of Duty: Warzone 2 </a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$194,99</h6>
+                                <div id="estoque-pc-2">Estoque: 105</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPC(2)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPC(2)"
+                                    style="background-color: green;">Adicionar Estoque</button>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Produto 3 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/hogwarts-legacy.jpg" class="main-image" alt="Hogwarts Legacy PS5">
-                                    <img src="assets/img/jogos/hogwarts-legacy.jpg" class="hover-image" alt="Hogwarts Legacy PS5">              
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Hogwarts Legacy - PS5 (Mídia Digital)</span>
-                                <h3 id="produto3"><a>Hogwarts Legacy</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$220,99</h6>
-                                    <div id="estoque3">Estoque: 40</div>
-                                    <button class="btn btn-primary" onclick="venderProduto(3)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProduto(3)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>              
+                <!-- Produto 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/valorant.jpg" class="main-image" alt="Valorant">
+                                <img src="assets/img/jogos/valorant.jpg" class="hover-image" alt="Valorant">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Valorant - PC</span>
+                            <h3 id="produto-pc-3"><a>Valorant</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$9,99</h6>
+                                <div id="estoque-pc-3">Estoque: 55</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPC(3)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPC(3)"
+                                    style="background-color: green;">Adicionar Estoque</button>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Produto 4 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/cod-modern-warfare.jpg" class="main-image" alt="Call of Duty: Modern Warfare III PS5">
-                                    <img src="assets/img/jogos/cod-modern-warfare.jpg" class="hover-image" alt="Call of Duty: Modern Warfare III PS5">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Call of Duty: Modern Warfare III - PS5 (Mídia Digital)</span>
-                                <h3 id="produto4"><a>Call of Duty: Modern Warfare III</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$361,35</h6>
-                                    <div id="estoque4">Estoque: 35</div>
-                                    <button class="btn btn-primary" onclick="venderProduto(4)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProduto(4)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>          
+                <!-- Produto 4 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/redDead_2-pc.jpg" class="main-image"
+                                    alt="Red Dead Redemption 2 PC">
+                                <img src="assets/img/jogos/redDead_2-pc.jpg" class="hover-image"
+                                    alt="Red Dead Redemption 2 PC">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Red Dead Redemption 2 - PC</span>
+                            <h3 id="produto-pc-4"><a>Red Dead Redemption 2</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$249,99</h6>
+                                <div id="estoque-pc-4">Estoque: 65</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPC(4)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPC(4)"
+                                    style="background-color: green;">Adicionar Estoque</button>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Produto 5 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/assassins-creed-mirage.jpg" class="main-image" alt="Assassin's Creed Mirage PS5">
-                                    <img src="assets/img/jogos/assassins-creed-mirage.jpg" class="hover-image" alt="Assassin's Creed Mirage PS5">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Assassin's Creed Mirage  - PS5 (Mídia Digital)</span>
-                                <h3 id="produto5"><a>Assassin's Creed Mirage </a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$244,99</h6>
-                                    <div id="estoque5">Estoque: 25</div>
-                                    <button class="btn btn-primary" onclick="venderProduto(5)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProduto(5)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>        
+                <!-- Produto 5 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/minecraft-pc.jpg" class="main-image" alt="Minecraft">
+                                <img src="assets/img/jogos/minecraft-pc.jpg" class="hover-image" alt="Minecraft">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Minecraft - PC</span>
+                            <h3 id="produto-pc-5"><a>Minecraft</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$199,99</h6>
+                                <div id="estoque-pc-5">Estoque: 45</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPC(5)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPC(5)"
+                                    style="background-color: green;">Adicionar Estoque</button>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Produto 6 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/spider-man2.jpg" class="main-image" alt="Spider Man 2 PS5">
-                                    <img src="assets/img/jogos/spider-man2.jpg" class="hover-image" alt="Spider Man 2 PS5">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Spider Man 2 - PS5 (Mídia Digital)</span>
-                                <h3 id="produto6"><a>Spider Man 2</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$329,99</h6>
-                                    <div id="estoque6">Estoque: 20</div>
-                                    <button class="btn btn-primary" onclick="venderProduto(6)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProduto(6)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>        
+                <!-- Produto 6 -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="jogos-box">
+                        <div class="img-jogos">
+                            <a> <!-- a:hover -->
+                                <img src="assets/img/jogos/among_us-pc.jpg" class="main-image" alt="Among Us">
+                                <img src="assets/img/jogos/among_us-pc.jpg" class="hover-image" alt="Among Us">
+                            </a>
+                        </div>
+                        <div class="jogos">
+                            <span class="category">Among Us - PC</span>
+                            <h3 id="produto-pc-6"><a>Among Us</a></h3> <!-- a:hover -->
+                            <div class="preco">
+                                <h6>R$20,99</h6>
+                                <div id="estoque-pc-6">Estoque: 45</div>
+                                <button class="btn btn-primary" onclick="venderProdutoPC(6)"
+                                    style="background-color: green;">Venda Realizada</button>
+                                <button class="btn btn-primary" onclick="adicionarProdutoPC(6)"
+                                    style="background-color: green;">Adicionar Estoque</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Fim Jogos PlayStation 5 -->
- 
-        <script>  
-            // Funcionalidade 1 informar venda de produtos 
-            // script para venda de produto em estoque PS5
-            function venderProduto(produtoId) {
-                // Solicita ao usuário a quantidade a ser vendida
-                var quantidade = prompt("Quanto do estoque foi vendido? ");
-                // Converte a entrada do usuário para um número inteiro
-                quantidade = parseInt(quantidade);
-    
-                var estoqueElement = document.getElementById("estoque" + produtoId); // Acessar o estoque do produto por ID
-                // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
-                var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1]); // Funções com Strings split
-                
-                // Utilização de Operadores <=
-                if (quantidade <= estoqueAtual) { // verifica se a quantidade digitada é menor ou igual ao estoque 
-                    var novoEstoque = estoqueAtual - quantidade; // cálculo para novo estoque após venda
-                    estoqueElement.textContent = "Estoque: " + novoEstoque; // Atualiza o texto do elemento HTML com o novo estoque
-                    alert("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + novoEstoque + " itens");
-                    console.log("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + novoEstoque + " itens");
-                } else {
-                    alert("Quantidade de venda excede o estoque disponível."); // alerta se a quantidade digitada for maior que o estoque 
-                }
+        </div>
+    </section>
+    <!-- Fim Jogos PC -->
+
+    <script>
+        //  // Funcionalidade 5
+        // script para venda de produto em estoque PC
+        async function venderProdutoPC(produtoId) {
+            // Solicita ao usuário a quantidade a ser vendida
+            var quantidade = prompt("Quanto do estoque foi vendido? ");
+            // Converte a entrada do usuário para um número inteiro
+            quantidade = parseInt(quantidade);
+
+            var estoqueElement = document.getElementById("estoque-pc-" + produtoId); // Acessar o estoque do produto por ID
+            // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
+            var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1]);
+
+            if (quantidade <= estoqueAtual) { // verifica se a quantidade digitada é menor ou igual ao estoque 
+                var novoEstoque = estoqueAtual - quantidade; // cálculo para novo estoque após venda
+                estoqueElement.textContent = "Estoque: " + novoEstoque; // Atualiza o texto do elemento HTML com o novo estoque
+
+                // atraso de 3000 milissegundos (3 segundos) antes de exibir o alerta
+                await new Promise(resolve => setTimeout(resolve, 3000));
+
+                alert("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto-pc-" + produtoId).textContent + ": " + novoEstoque + " itens");
+                console.log("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto-pc-" + produtoId).textContent + ": " + novoEstoque + " itens");
+            } else {
+                alert("Quantidade de venda excede o estoque disponível."); // alerta se a quantidade digitada for maior que o estoque 
             }
+        }
 
-            // Funcionalidade 2 adicionar estoque
-            //script para adicionar produtos ao estoque no PS5
-            function adicionarProduto(produtoId) {
-                // Solicita ao usuário a quantidade a ser adicionada
-                var quantidade = prompt("Qual a quantidade de produtos a ser adicionado ? ")
-                // Converte a entrada do usuário para um número inteiro
-                quantidade = parseInt(quantidade)
+        // // Funcionalidade 6
+        //script para adicionar produtos ao estoque no PC
+        function adicionarProdutoPC(produtoId) {
+            // Solicita ao usuário a quantidade a ser adicionada
+            var quantidade = prompt("Qual a quantidade de produtos a ser adicionado ? ")
+            // Converte a entrada do usuário para um número inteiro
+            quantidade = parseInt(quantidade)
 
-                var estoqueElement = document.getElementById("estoque" + produtoId) // Acessar o estoque do produto por ID
-                // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
-                var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1])
+            var estoqueElement = document.getElementById("estoque-pc-" + produtoId) // Acessar o estoque do produto por ID
+            // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
+            var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1])
 
-                // Utilização de Operadores >
-                if (quantidade > 0 ) { // verifica se a quantidade digitada é maior que zero
-                    var adicionarEstoque = estoqueAtual + quantidade // cálculo para novo estoque após ser adicionado novos produtos
-                    estoqueElement.textContent = "Estoque: " + adicionarEstoque; // Atualiza o texto do elemento HTML com o novo estoque
-                    // Comandos de saída
-                    alert("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + adicionarEstoque + " itens")
-                    console.log("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + adicionarEstoque + " itens")
-                }
-                else {
-                    alert("Quantidade para ser adicionada é menor que zero, digite uma opção valida.") // alerta se a quantidade digitada for menor que zero
-                }
+            if (quantidade > 0) { // verifica se a quantidade digitada é maior que zero
+                var adicionarEstoque = estoqueAtual + quantidade // cálculo para novo estoque após ser adicionado novos produtos
+                estoqueElement.textContent = "Estoque: " + adicionarEstoque; // Atualiza o texto do elemento HTML com o novo estoque
+                alert("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-pc-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
+                console.log("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-pc-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
             }
-            
-        </script>
-        
+            else {
+                alert("Quantidade para ser adicionada é menor que zero, digite uma opção valida.") // alerta se a quantidade digitada for menor que zero
+            }
+        }
 
-        <!-- Jogos PlayStation 4 -->
-        <section id="playstation4" class="products-area pt-100 pb-70">
-            <div class="container">
-                <div class="section-title">
-                    <h2>PlayStation 4</h2>
+
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Logomarca -->
+                <div class="col-md-6 text-left ">
+                    <img src="assets/img/logo_unifacisa.png" alt="Logomarca Unifacisa" class="img-fluid" width="400px">
+                    <img id="logo_gameplay_footer" src="assets/img/gameplay-logo-white.png" alt="Logomarca GamePlay"
+                        width="400">
                 </div>
 
-                <!-- Produto 1 -->
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/red-dead-2.jpg" class="main-image" alt="Red Dead Redemption 2 PS4">
-                                    <img src="assets/img/jogos/red-dead-2.jpg" class="hover-image" alt="Red Dead Redemption 2 PS4">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Red Dead Redemption 2 - PS4</span>
-                                <h3 id="produto-ps4-1"><a>Red Dead Redemption 2</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$110,90</h6>
-                                    <div id="estoque-ps4-1">Estoque: 45</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPS4(1)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(1)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>          
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Produto 2 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/fallout-4.jpg" class="main-image" alt="Fallout PS4">
-                                    <img src="assets/img/jogos/fallout-4.jpg" class="hover-image" alt="Fallout PS4">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Fallout - PS4</span>
-                                <h3 id="produto-ps4-2"><a>Fallout</a></h3> <!-- a:hover -->        
-                                <div class="preco">
-                                    <h6>R$49,90</h6>
-                                    <div id="estoque-ps4-2">Estoque: 25</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPS4(2)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(2)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Produto 3 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/dishonored-2.jpg" class="main-image" alt="Dishonored 2 PS4">
-                                    <img src="assets/img/jogos/dishonored-2.jpg" class="hover-image" alt="Dishonored 2 PS4">        
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Dishonored 2 - PS4</span>
-                                <h3 id="produto-ps4-3"><a>Dishonored 2</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$149,50</h6>
-                                    <div id="estoque-ps4-3">Estoque: 15</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPS4(3)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(3)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>        
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Produto 4 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/bloodborne.jpg" class="main-image" alt="Bloodborne PS4">
-                                    <img src="assets/img/jogos/bloodborne.jpg" class="hover-image" alt="Bloodborne PS4">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Bloodborne - PS4</span>
-                                <h3 id="produto-ps4-4"><a>Bloodborne</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$99,90</h6>
-                                    <div id="estoque-ps4-4">Estoque: 20</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPS4(4)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(4)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>        
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Produto 5 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/shadow-of-the-colossus.jpg" class="main-image" alt="Shadow Of The Colossus PS4">
-                                    <img src="assets/img/jogos/shadow-of-the-colossus.jpg" class="hover-image" alt="Shadow Of The Colossus PS4">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Shadow of the Colossus - PS4</span>
-                                <h3 id="produto-ps4-5"><a>Shadow of the Colossus</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$110,00</h6>
-                                    <div id="estoque-ps4-5">Estoque: 20</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPS4(5)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(5)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>       
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Produto 6 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/detroit.jpg" class="main-image" alt="Detroit Become Human PS4">
-                                    <img src="assets/img/jogos/detroit.jpg" class="hover-image" alt="Detroit Become Human PS4">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Detroit: Become Human - PS4</span>
-                                <h3 id="produto-ps4-6"><a>Detroit: Become Human</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$100,00</h6>
-                                    <div id="estoque-ps4-6">Estoque: 35</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPS4(6)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPS4(6)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>                 
-                            </div>
-                        </div>
-                    </div>
+                <!-- Grupo -->
+                <div class="col-md-6">
+                    <h5>Programar Em Linguagem Interpretada</h5>
+                    <br>
+                    <h6 id="nome-grupo">Grupo:</h6>
+                    <h6 id="nome-grupo">Diogo Diniz Spínola Ribeiro | João Vitor Silva Monteiro | Keven Max Bezerra de
+                        Sousa | Thiago Ribeiro Ramos
+                        Silva
+                    </h6>
+                    <br>
                 </div>
             </div>
-        </section>
-        <!-- Fim Jogos PlayStation 4 -->
+        </div>
 
-        <script> 
-             // Funcionalidade 3
-            // script para venda de produto em estoque PS4
-            function venderProdutoPS4(produtoId) {
-                // Solicita ao usuário a quantidade a ser vendida
-                var quantidade = prompt("Quanto do estoque foi vendido? ");
-                // Converte a entrada do usuário para um número inteiro
-                quantidade = parseInt(quantidade);
-    
-                var estoqueElement = document.getElementById("estoque-ps4-" + produtoId); // Acessar o estoque do produto por ID
-                // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
-                var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1]);
-    
-                if (quantidade <= estoqueAtual) { // verifica se a quantidade digitada é menor ou igual ao estoque 
-                    var novoEstoque = estoqueAtual - quantidade; // cálculo para novo estoque após venda
-                    estoqueElement.textContent = "Estoque: " + novoEstoque; // Atualiza o texto do elemento HTML com o novo estoque
-                    // Comandos de saída
-                    alert("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto-ps4-" + produtoId).textContent + ": " + novoEstoque + " itens");
-                    console.log("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto-ps4-" + produtoId).textContent + ": " + novoEstoque + "itens");
-                } else {
-                    alert("Quantidade de venda excede o estoque disponível."); // alerta se a quantidade digitada for maior que o estoque 
-                }
-            }
+        <!-- Subir ao topo da página -->
+        <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
 
-             // Funcionalidade 4
-             //script para adicionar produtos ao estoque no PS4
-             function adicionarProdutoPS4(produtoId) {
-                // Solicita ao usuário a quantidade a ser adicionada 
-                var quantidade = prompt("Qual a quantidade de produtos a ser adicionado ? ")
-                // Converte a entrada do usuário para um número inteiro
-                quantidade = parseInt(quantidade)
+        <div class="social-icons">
+            <!-- Ícones Git e Linkedin -->
+            <a href="https://github.com/spinola109" target="_blank"><i class="fa fa-github fa-2x"
+                    aria-hidden="true"></i></a>
+            <p>@spinola109</p>
+            <a href="https://www.linkedin.com/in/diogo-sp%C3%ADnola-051295291" target="_blank"><i
+                    class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+        </div>
 
-                var estoqueElement = document.getElementById("estoque-ps4-" + produtoId) // Acessar o estoque do produto por ID
-                // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
-                var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1])
+        <div class="social-icons">
+            <!-- Ícones Git e Linkedin -->
+            <a href="https://github.com/JoaoVSMonteiro" target="_blank"><i class="fa fa-github fa-2x"
+                    aria-hidden="true"></i></a>
+            <p>@JoaoVSMonteiro</p>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-monteiro-8411aa309/" target="_blank"><i
+                    class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+        </div>
 
-                if (quantidade > 0 ) { // verifica se a quantidade digitada é maior que zero
-                    var adicionarEstoque = estoqueAtual + quantidade // cálculo para novo estoque após ser adicionado novos produtos
-                    estoqueElement.textContent = "Estoque: " + adicionarEstoque; // Atualiza o texto do elemento HTML com o novo estoque
-                    alert("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-ps4-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
-                    console.log("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-ps4-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
-                }
-                else {
-                    alert("Quantidade para ser adicionada é menor que zero, digite uma opção valida.") // alerta se a quantidade digitada for menor que zero
-                }
-            }
-        </script>
+        <div class="social-icons">
+            <!-- Ícones Git e Linkedin -->
+            <a href="https://github.com/Mkevenmax" target="_blank"><i class="fa fa-github fa-2x"
+                    aria-hidden="true"></i></a>
+            <p>@Mkevenmax</p>
+            <a href="https://www.linkedin.com/in/keven-max-050501284" target="_blank"><i class="fa fa-linkedin fa-2x"
+                    aria-hidden="true"></i></a>
+        </div>
 
-        <!-- Jogos PC -->
-        <section id="pc" class="products-area pt-100 pb-70">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Jogos PC</h2>
-                </div>
+        <div class="social-icons">
+            <!-- Ícones Git e Linkedin -->
+            <a href="https://github.com/thiago-ribeiro1" target="_blank"><i class="fa fa-github fa-2x"
+                    aria-hidden="true"></i></a>
+            <p>@thiago-ribeiro1</p>
+            <a href="https://www.linkedin.com/in/thiago-ribeiro-ramos" target="_blank"><i class="fa fa-linkedin fa-2x"
+                    aria-hidden="true"></i></a>
+        </div>
 
-                <!-- Produto 1 --> 
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/lol_3-pc.jpg" class="main-image" alt="League of Legends PC">
-                                    <img src="assets/img/jogos/lol_3-pc.jpg" class="hover-image" alt="League of Legends PC">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">League of Legends - PC</span>
-                                <h3 id="produto-pc-1"><a>League of Legends</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$9,99</h6>
-                                    <div id="estoque-pc-1">Estoque: 55</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPC(1)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(1)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>       
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Produto 2 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/cod_warzone.jpg" class="main-image" alt="Warzone">
-                                    <img src="assets/img/jogos/cod_warzone.jpg" class="hover-image" alt="Warzone">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Call of Duty: Warzone 2 - PC</span>
-                                <h3 id="produto-pc-2"><a>Call of Duty: Warzone 2 </a></h3> <!-- a:hover -->      
-                                <div class="preco">
-                                    <h6>R$194,99</h6>
-                                    <div id="estoque-pc-2">Estoque: 105</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPC(2)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(2)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Produto 3 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/valorant.jpg" class="main-image" alt="Valorant">
-                                    <img src="assets/img/jogos/valorant.jpg" class="hover-image" alt="Valorant">           
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Valorant - PC</span>
-                                <h3 id="produto-pc-3"><a>Valorant</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$9,99</h6>
-                                    <div id="estoque-pc-3">Estoque: 55</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPC(3)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(3)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>      
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Produto 4 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/redDead_2-pc.jpg" class="main-image" alt="Red Dead Redemption 2 PC">
-                                    <img src="assets/img/jogos/redDead_2-pc.jpg" class="hover-image" alt="Red Dead Redemption 2 PC">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Red Dead Redemption 2 - PC</span>
-                                <h3 id="produto-pc-4"><a>Red Dead Redemption 2</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$249,99</h6>
-                                    <div id="estoque-pc-4">Estoque: 65</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPC(4)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(4)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>     
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Produto 5 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover -->
-                                    <img src="assets/img/jogos/minecraft-pc.jpg" class="main-image" alt="Minecraft">
-                                    <img src="assets/img/jogos/minecraft-pc.jpg" class="hover-image" alt="Minecraft">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Minecraft - PC</span>
-                                <h3 id="produto-pc-5"><a>Minecraft</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$199,99</h6>
-                                    <div id="estoque-pc-5">Estoque: 45</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPC(5)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(5)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>     
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Produto 6 -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="jogos-box">
-                            <div class="img-jogos">
-                                <a> <!-- a:hover --> 
-                                    <img src="assets/img/jogos/among_us-pc.jpg" class="main-image" alt="Among Us">
-                                    <img src="assets/img/jogos/among_us-pc.jpg" class="hover-image" alt="Among Us">
-                                </a>
-                            </div>
-                            <div class="jogos">
-                                <span class="category">Among Us - PC</span>
-                                <h3 id="produto-pc-6"><a>Among Us</a></h3> <!-- a:hover -->
-                                <div class="preco">
-                                    <h6>R$20,99</h6>
-                                    <div id="estoque-pc-6">Estoque: 45</div>
-                                    <button class="btn btn-primary" onclick="venderProdutoPC(6)" style="background-color: green;">Venda Realizada</button>
-                                    <button class="btn btn-primary" onclick="adicionarProdutoPC(6)" style="background-color: green;">Adicionar Estoque</button>
-                                </div>                 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Fim Jogos PC -->
-
-        <script> 
-            //  // Funcionalidade 5
-            // script para venda de produto em estoque PC
-            function venderProdutoPC(produtoId) {
-                // Solicita ao usuário a quantidade a ser vendida
-                var quantidade = prompt("Quanto do estoque foi vendido? ");
-                // Converte a entrada do usuário para um número inteiro
-                quantidade = parseInt(quantidade);
-    
-                var estoqueElement = document.getElementById("estoque-pc-" + produtoId); // Acessar o estoque do produto por ID
-                // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
-                var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1]);
-    
-                if (quantidade <= estoqueAtual) { // verifica se a quantidade digitada é menor ou igual ao estoque 
-                    var novoEstoque = estoqueAtual - quantidade; // cálculo para novo estoque após venda
-                    estoqueElement.textContent = "Estoque: " + novoEstoque; // Atualiza o texto do elemento HTML com o novo estoque
-                    alert("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto-pc-" + produtoId).textContent + ": " + novoEstoque + " itens");
-                    console.log("Venda realizada com sucesso. Estoque atualizado do produto: " + document.getElementById("produto-pc-" + produtoId).textContent + ": " + novoEstoque + " itens");
-                } else {
-                    alert("Quantidade de venda excede o estoque disponível."); // alerta se a quantidade digitada for maior que o estoque 
-                }
-            }
-
-            // // Funcionalidade 6
-             //script para adicionar produtos ao estoque no PC
-             function adicionarProdutoPC(produtoId) {
-                // Solicita ao usuário a quantidade a ser adicionada
-                var quantidade = prompt("Qual a quantidade de produtos a ser adicionado ? ")
-                // Converte a entrada do usuário para um número inteiro
-                quantidade = parseInt(quantidade)
-
-                var estoqueElement = document.getElementById("estoque-pc-" + produtoId) // Acessar o estoque do produto por ID
-                // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
-                var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1])
-
-                if (quantidade > 0 ) { // verifica se a quantidade digitada é maior que zero
-                    var adicionarEstoque = estoqueAtual + quantidade // cálculo para novo estoque após ser adicionado novos produtos
-                    estoqueElement.textContent = "Estoque: " + adicionarEstoque; // Atualiza o texto do elemento HTML com o novo estoque
-                    alert("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-pc-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
-                    console.log("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto-pc-" + produtoId).textContent + ": " + adicionarEstoque + " itens")
-                }
-                else {
-                    alert("Quantidade para ser adicionada é menor que zero, digite uma opção valida.") // alerta se a quantidade digitada for menor que zero
-                }
-            }
+    </footer>
+    <!-- Fim do Footer -->
 
 
-        </script>
+    <!-- JS  -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/meanmenu.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
 
-        <!-- Footer -->  
-        <footer class="bg-dark text-white text-center py-4">
-            <div class="container">
-               <div class="row">
-                  <!-- Logomarca -->
-                  <div class="col-md-6 text-left ">
-                     <img src="assets/img/logo_unifacisa.png" alt="Logomarca Unifacisa" class="img-fluid" width="400px">
-                        <img id="logo_gameplay_footer" src="assets/img/gameplay-logo-white.png" alt="Logomarca GamePlay" width="400">
-                  </div>
-
-                  <!-- Grupo -->
-                  <div class="col-md-6">
-                     <h5>Programar Em Linguagem Interpretada</h5>
-                     <br>
-                     <h6 id="nome-grupo">Grupo:</h6>
-                     <h6 id="nome-grupo">Diogo Diniz Spínola Ribeiro | João Vitor Silva Monteiro | Keven Max Bezerra de Sousa | Thiago Ribeiro Ramos
-                        Silva 
-                     </h6>
-                     <br> 
-                  </div>
-               </div>
-            </div> 
-
-            <!-- Subir ao topo da página -->
-            <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
-
-            <div class="social-icons">
-               <!-- Ícones Git e Linkedin -->
-               <a href="https://github.com/spinola109" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-               <p>@spinola109</p>
-               <a href="https://www.linkedin.com/in/diogo-sp%C3%ADnola-051295291" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
-            </div>
-
-            <div class="social-icons">
-                <!-- Ícones Git e Linkedin -->
-                <a href="https://github.com/JoaoVSMonteiro" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-                <p>@JoaoVSMonteiro</p>
-                <a href="https://www.linkedin.com/in/jo%C3%A3o-monteiro-8411aa309/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
-             </div>
-
-            <div class="social-icons">
-               <!-- Ícones Git e Linkedin -->
-               <a href="https://github.com/Mkevenmax" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-               <p>@Mkevenmax</p>
-               <a href="https://www.linkedin.com/in/keven-max-050501284" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
-            </div>
-
-            <div class="social-icons">
-               <!-- Ícones Git e Linkedin -->
-               <a href="https://github.com/thiago-ribeiro1" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-               <p>@thiago-ribeiro1</p>
-               <a href="https://www.linkedin.com/in/thiago-ribeiro-ramos" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
-            </div>
-
-         </footer>
-         <!-- Fim do Footer -->
-    
-
-        <!-- JS  -->
-        <script type="text/javascript" src="assets/js/jquery.min.js"></script> 
-        <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
-        <script type="text/javascript" src="assets/js/meanmenu.min.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
-    </body>
 </html>
