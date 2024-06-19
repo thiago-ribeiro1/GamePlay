@@ -334,8 +334,12 @@
     <!-- Fim Jogos PlayStation 5 -->
 
     <script>
-        // Funcionalidade 1 informar venda de produtos 
+
+        // Funcionalidade 1 informar venda de produtos PS5
+
         // script para venda de produto em estoque PS5
+
+        // Função assíncrona
         async function venderProduto(produtoId) {
             // Solicita ao usuário a quantidade a ser vendida
             var quantidade = prompt("Quanto do estoque foi vendido? ");
@@ -344,9 +348,11 @@
 
             var estoqueElement = document.getElementById("estoque" + produtoId); // Acessar o estoque do produto por ID
             // Obtém o estoque atual a partir do texto do elemento e converte para um número inteiro
+
+            // obtém o valor numérico do estoque do html e converte pra inteiro
             var estoqueAtual = parseInt(estoqueElement.textContent.split(": ")[1]); // Funções com Strings split
 
-            // Utilização de Operadores <=
+            // Utilização de Operadores <= =
             if (quantidade <= estoqueAtual) { // verifica se a quantidade digitada é menor ou igual ao estoque 
                 var novoEstoque = estoqueAtual - quantidade; // cálculo para novo estoque após venda
                 estoqueElement.textContent = "Estoque: " + novoEstoque; // Atualiza o texto do elemento HTML com o novo estoque
@@ -361,7 +367,8 @@
             }
         }
 
-        // Funcionalidade 2 adicionar estoque
+        // Funcionalidade 2 adicionar estoque PS5
+
         //script para adicionar produtos ao estoque no PS5
         function adicionarProduto(produtoId) {
             // Solicita ao usuário a quantidade a ser adicionada
@@ -377,6 +384,7 @@
             if (quantidade > 0) { // verifica se a quantidade digitada é maior que zero
                 var adicionarEstoque = estoqueAtual + quantidade // cálculo para novo estoque após ser adicionado novos produtos
                 estoqueElement.textContent = "Estoque: " + adicionarEstoque; // Atualiza o texto do elemento HTML com o novo estoque
+
                 // Comandos de saída
                 alert("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + adicionarEstoque + " itens")
                 console.log("Produtos adicionados no estoque com sucesso! Estoque atualizado do produto: " + document.getElementById("produto" + produtoId).textContent + ": " + adicionarEstoque + " itens")
@@ -552,8 +560,12 @@
     <!-- Fim Jogos PlayStation 4 -->
 
     <script>
-        // Funcionalidade 3
+
+        // Funcionalidade 3 informar venda de produtos PS4
+
         // script para venda de produto em estoque PS4
+
+        // Função assíncrona
         async function venderProdutoPS4(produtoId) {
             // Solicita ao usuário a quantidade a ser vendida
             var quantidade = prompt("Quanto do estoque foi vendido? ");
@@ -579,7 +591,8 @@
             }
         }
 
-        // Funcionalidade 4
+        // Funcionalidade 4 adicionar estoque PS4
+
         //script para adicionar produtos ao estoque no PS4
         function adicionarProdutoPS4(produtoId) {
             // Solicita ao usuário a quantidade a ser adicionada 
@@ -762,8 +775,12 @@
     <!-- Fim Jogos PC -->
 
     <script>
-        //  // Funcionalidade 5
+
+        //  // Funcionalidade 5 informar venda de produtos PC
+
         // script para venda de produto em estoque PC
+
+        // Função assíncrona
         async function venderProdutoPC(produtoId) {
             // Solicita ao usuário a quantidade a ser vendida
             var quantidade = prompt("Quanto do estoque foi vendido? ");
@@ -788,7 +805,8 @@
             }
         }
 
-        // // Funcionalidade 6
+        // // Funcionalidade 6 adicionar estoque PC
+
         //script para adicionar produtos ao estoque no PC
         function adicionarProdutoPC(produtoId) {
             // Solicita ao usuário a quantidade a ser adicionada

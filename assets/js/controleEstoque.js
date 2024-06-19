@@ -14,4 +14,5 @@ function adicionarEstoque(estoqueAtual, quantidade) {
     }
 }
 
+// implementar módulos
 module.exports = {venderProduto, adicionarEstoque}; // exportar função

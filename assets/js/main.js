@@ -11,6 +11,7 @@
     });
 
     // Funcionalidade 8 barra de navegação aparece quando a posição de rolagem da janela ultrapassa 130 pixels a partir do topo (0px)
+
     // Header Sticky  
     // Torna a barra de navegação fixa
     // Quando a posição de rolagem da janela ultrapassa 130 pixels a partir do topo, a classe "is-sticky" é adicionada à barra de navegação
@@ -37,6 +38,7 @@
     });
 
     //Funcionalidade 9 Se o scroll estiver maior que 300 pixels, aparece o botão de voltar ao topo da página
+
     // Voltar ao início
     $(function(){ 
         $(window).on('scroll', function(){
@@ -63,7 +65,8 @@
  
 }(jQuery));
 
-    // Função com Array 1 lista de jogos barra de busca
+    // Função com Array lista de jogos barra de busca
+
     // Lista de jogos com seus respectivos IDs de seção
     const jogos = [
         { nome: "EA FC 24", id: "playstation5" }, // nome do jogo e id da seção onde tá localizado no html
@@ -86,10 +89,12 @@
         { nome: "Among Us", id: "pc" }
     ]; 
     // Funcionalidade 10
+
     // Função para mostrar resultados da pesquisa
     function mostrarResultados() {
         
         const input = document.getElementById('search-input'); // Captura o valor digitado no campo de busca
+        
         // Funções com Strings toLowerCase()
         const filter = input.value.toLowerCase(); // Transforma o texto de busca em letras minúsculas
         const results = document.getElementById('search-results'); // Captura o elemento que exibirá os resultados da busca
@@ -132,6 +137,7 @@
     }
 
     // Funcionalidade 11
+
     function redirecionarId() { // Função para redirecionar para o primeiro jogo encontrada
         
         const input = document.getElementById('search-input'); // Captura o valor do campo de busca   
